@@ -1,4 +1,4 @@
-import {} from 'dotenv/config';
+import 'dotenv/config';
 import fs from 'fs';
 import { Client, GatewayIntentBits } from 'discord.js';
 
@@ -19,5 +19,4 @@ for (let event of events) {
 			eventFile.invoke(...args);
 		});
 }
-
-client.login("NzczMjk0NDk2ODc5ODY5OTg0.GDxsB2.7_QIEpHNFnORQeKoN83pgpbe2EXIVtG3unRmg8");
+client.login(process.env.BOT_TOKEN);

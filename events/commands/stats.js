@@ -19,6 +19,11 @@ const invoke = async (interaction) => {
             throw new Error('Failed to fetch user data');
         }
         const userData = await response.json();
+        if(userData.result[0] == undefined) {
+            return interaction.reply({
+                content: `\`\`\`js\nNo available data from the player.\`\`\``
+            });
+        }    
         interaction.reply({
             content: `\`\`\`js\n${JSON.stringify(userData.result[0], null, 4)}\`\`\``
         });
