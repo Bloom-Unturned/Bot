@@ -2,6 +2,8 @@ import fs from 'fs';
 import { ActivityType } from 'discord.js';
 import { joinVoiceChannel } from '@discordjs/voice';
 import { join } from 'path';
+import pterosocket from 'pterosocket';
+
 const once = true;
 const name = 'ready';
 
@@ -41,6 +43,7 @@ async function invoke(client) {
     }
     
     console.log(`Successfully logged in as ${client.user.tag}!`);
+    
 }
 
 export { once, name, invoke };

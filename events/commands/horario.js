@@ -2,8 +2,8 @@ import { SlashCommandBuilder } from 'discord.js';
 
 const create = () => {
     const command = new SlashCommandBuilder()
-        .setName('link')
-        .setDescription('Links a user to a player');
+        .setName('horario')
+        .setDescription('Muestra los horarios de raideo del servidor');
 
     return command.toJSON();
 };
@@ -11,7 +11,7 @@ const create = () => {
 const invoke = async (interaction) => {
     try {
         interaction.reply({
-            content: `Click [Here](https://bloomnetwork.online/Profile), Log in and link your discord account. https://cdn.discordapp.com/attachments/834039810838626307/1235822637721194567/Video_sin_titulo_Hecho_con_Clipchamp_68.gif?ex=6642f405&is=6641a285&hm=bedf3859933519571b17457855cd7b11eae3acb0a5cbf0d70b7213b8c0ca77aa&`
+            content: `Los horarios de raideo son desde <t:1715634000:t> hasta <t:1715644800:t> (3h). Ambas horas se convierten automaticamente a tu zona horaria, no hace falta preguntar "¿Pero en x que hora sería?".`
         });
     } catch (error) {
         console.error('Error fetching user data:', error);

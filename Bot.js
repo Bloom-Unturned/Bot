@@ -19,4 +19,5 @@ for (let event of events) {
 			eventFile.invoke(...args);
 		});
 }
+//const socket = new pterosocket(process.env.ORIGIN, process.env.API_KEY, process.env.SERVER_NO);
 client.login(process.env.BOT_TOKEN);

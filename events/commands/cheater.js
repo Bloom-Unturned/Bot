@@ -2,8 +2,8 @@ import { SlashCommandBuilder } from 'discord.js';
 
 const create = () => {
     const command = new SlashCommandBuilder()
-        .setName('link')
-        .setDescription('Links a user to a player');
+        .setName('cheater')
+        .setDescription('Muestra los como reportar un cheater');
 
     return command.toJSON();
 };
@@ -11,7 +11,7 @@ const create = () => {
 const invoke = async (interaction) => {
     try {
         interaction.reply({
-            content: `Click [Here](https://bloomnetwork.online/Profile), Log in and link your discord account. https://cdn.discordapp.com/attachments/834039810838626307/1235822637721194567/Video_sin_titulo_Hecho_con_Clipchamp_68.gif?ex=6642f405&is=6641a285&hm=bedf3859933519571b17457855cd7b11eae3acb0a5cbf0d70b7213b8c0ca77aa&`
+            content: `Hay un cheater en el servidor? crea un ticket en <#834039811081502761>, deberás **proveer su perfil de la pagina** visitando [el apartado de players](https://bloomnetwork.online/players). Screenshots de sus stats, nombre o tickets vacios **relentizan la sancion al cheater**, en su defecto su steamid será suficiente.`
         });
     } catch (error) {
         console.error('Error fetching user data:', error);
